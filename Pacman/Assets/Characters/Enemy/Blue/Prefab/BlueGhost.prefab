@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8060327406600681595}
   m_Layer: 0
   m_Name: BlueGhost
-  m_TagString: Untagged
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
