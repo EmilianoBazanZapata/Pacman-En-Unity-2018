@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &166046705 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9146389347052091927, guid: 0d893184ea7698040a75d817d27506be,
+    type: 3}
+  m_PrefabInstance: {fileID: 2085494365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &269984858
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +155,6 @@ GameObject:
   - component: {fileID: 269984885}
   - component: {fileID: 269984886}
   - component: {fileID: 269984887}
-  - component: {fileID: 269984888}
   - component: {fileID: 269984889}
   - component: {fileID: 269984890}
   - component: {fileID: 269984891}
@@ -921,32 +926,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.000061, y: 2.0000486}
   m_EdgeRadius: 0
---- !u!61 &269984888
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269984858}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -5.4385796, y: 4.0400543}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 27, y: 30.000969}
-  m_EdgeRadius: 0
 --- !u!61 &269984889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1493,6 +1472,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5566978, y: 0.99998856}
   m_EdgeRadius: 0
+--- !u!1 &394281199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9146389346895927079, guid: 0d893184ea7698040a75d817d27506be,
+    type: 3}
+  m_PrefabInstance: {fileID: 2085494365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &394281203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394281199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96cf1e27ff6b1c42b4d2814d1e7a932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  destination: {x: 0, y: 0}
+  animator: {fileID: 166046705}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,15 +1666,35 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6204628309112881024, guid: 0d893184ea7698040a75d817d27506be,
+        type: 3}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204628309112881024, guid: 0d893184ea7698040a75d817d27506be,
+        type: 3}
+      propertyPath: m_Mass
+      value: 3.1006787
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204628309112881024, guid: 0d893184ea7698040a75d817d27506be,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204628309112881024, guid: 0d893184ea7698040a75d817d27506be,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9146389346895927078, guid: 0d893184ea7698040a75d817d27506be,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.001
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9146389346895927078, guid: 0d893184ea7698040a75d817d27506be,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.45
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9146389346895927078, guid: 0d893184ea7698040a75d817d27506be,
         type: 3}
@@ -1740,6 +1760,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pacman
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146389347052091926, guid: 0d893184ea7698040a75d817d27506be,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d893184ea7698040a75d817d27506be, type: 3}
