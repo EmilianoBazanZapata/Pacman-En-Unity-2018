@@ -7,7 +7,7 @@ public class PacmanMovement : MonoBehaviour
     public float speed = 0.4f;
 
     public Vector2 destination = Vector2.zero;
-
+    public Animator animator;
     void Start()
     {
         destination = this.transform.position;
@@ -53,9 +53,9 @@ public class PacmanMovement : MonoBehaviour
         }
 
 
-       // Vector2 dir = destination - (Vector2)this.transform.position;
-        //GetComponent<Animator>().SetFloat("DirX", dir.x);
-        //GetComponent<Animator>().SetFloat("DirY", dir.y);
+        Vector2 Mov = destination - (Vector2)this.transform.position;
+        animator.SetFloat("DirX", Mov.x);
+        animator.SetFloat("DirY", Mov.y);
 
         //Método que dada una posible dirección de movimiento
         //devuelve true si podemos ir en dicha dirección
