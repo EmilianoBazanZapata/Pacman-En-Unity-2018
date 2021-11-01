@@ -78,7 +78,7 @@
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
 /reference:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
-/reference:C:/Users/Emiliano/Desktop/Unity/Pacman-En-Unity-2018/Pacman/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll
+/reference:C:/Users/Emiliano/Desktop/Pacman/Pacman-En-Unity-2018/Pacman/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll
 /reference:"C:\Program Files\Unity\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\Microsoft.Win32.Primitives.dll"
 /reference:"C:\Program Files\Unity\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.AppContext.dll"
@@ -295,5 +295,6 @@
 /define:UNITY_PRO_LICENSE
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+Assets\Scripts\GhostMovement.cs
 Assets\Scripts\PacDot.cs
 Assets\Scripts\PacmanMovement.cs
