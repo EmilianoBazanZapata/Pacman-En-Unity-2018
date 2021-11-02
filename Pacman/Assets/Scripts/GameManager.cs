@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public bool GameStarted = false;
     public bool GamePaused = false;
     public AudioClip PauseAudio;
+    public float InvicibleTime = 0.0f;
     private void Awake()
     {
         if (SharedInstance == null)
@@ -32,7 +33,10 @@ public class GameManager : MonoBehaviour
                 PauseMusic();
             }
         }
-
+        if(InvicibleTime>0)
+        {
+            InvicibleTime -= Time.deltaTime;
+        }
     }
     //Coroutina para iniciar el juego
     IEnumerator StartGame()
@@ -53,5 +57,10 @@ public class GameManager : MonoBehaviour
     private void PauseMusic()
     {
         GetComponent<AudioSource>().Stop();
+    }
+    //metodo para matar fantasmas 
+    public void MakeInvicibleFor(float NumerOfSeconds)
+    {
+        InvicibleTime += NumerOfSeconds;
     }
 }

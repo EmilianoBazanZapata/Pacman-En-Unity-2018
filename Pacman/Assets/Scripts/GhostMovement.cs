@@ -8,6 +8,16 @@ public class GhostMovement : MonoBehaviour
     int CurrentWayPoint = 0; public float Speed = 5.8f;
     public Animator animator;
     public Rigidbody2D rigidbody2D;
+    private void Update() {
+        if(GameManager.SharedInstance.InvicibleTime>0)
+        {
+            animator.SetBool("Death",true);
+        }
+        else
+        {
+            animator.SetBool("Death",false);
+        }
+    }
     private void FixedUpdate()
     {
         if (GameManager.SharedInstance.GameStarted && !GameManager.SharedInstance.GamePaused)
