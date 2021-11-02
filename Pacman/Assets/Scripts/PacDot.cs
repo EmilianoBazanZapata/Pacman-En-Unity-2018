@@ -8,6 +8,7 @@ public class PacDot : MonoBehaviour
         if(other.tag == "Pacman")
         {
             Destroy(this.gameObject);
+            UIManager.SharedInstance.ScorePoints(100);
         }
     }
 }

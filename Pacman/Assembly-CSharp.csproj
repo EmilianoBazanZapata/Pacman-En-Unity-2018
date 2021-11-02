@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\GhostMovement.cs" />
      <Compile Include="Assets\Scripts\PacDot.cs" />
      <Compile Include="Assets\Scripts\PacmanMovement.cs" />
+     <Compile Include="Assets\Scripts\UIManager.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Emiliano/Desktop/Pacman/Pacman-En-Unity-2018/Pacman/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
