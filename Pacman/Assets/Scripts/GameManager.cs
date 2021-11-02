@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager SharedInstance;
     public bool GameStarted = false;
     public bool GamePaused = false;
+    public bool GameFinishied = false;
     public AudioClip PauseAudio, StartAudio;
     public float InvicibleTime = 0.0f;
     public GameObject Pacman;
+    public int Pacdots;
     private void Awake()
     {
         if (SharedInstance == null)
@@ -69,5 +71,24 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("PacmanGame");
+    }
+    //finalizar partida
+    public void FinishGame(int pacdot)
+    {
+        this.Pacdots += pacdot;
+        //Debug.Log(Pacdots);
+        if (Pacdots == 333)
+        {
+            this.RestartGame();
+        }
+    }
+    //metodo para salor del juego
+    public void Exit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }

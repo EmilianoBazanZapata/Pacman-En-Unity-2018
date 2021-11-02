@@ -9,6 +9,7 @@ public class PacDot : MonoBehaviour
         {
             Destroy(this.gameObject);
             UIManager.SharedInstance.ScorePoints(100);
+            GameManager.SharedInstance.FinishGame(1);
         }
     }
 }
