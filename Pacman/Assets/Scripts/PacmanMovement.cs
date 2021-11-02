@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PacmanMovement : MonoBehaviour
 {
-    public float speed = 0.4f;
+    public float speed = 0.2f;
 
     public Vector2 destination = Vector2.zero;
     public Animator animator;

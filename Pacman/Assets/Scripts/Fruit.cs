@@ -8,7 +8,8 @@ public class Fruit : MonoBehaviour
     {
         if(other.tag == "Pacman")
         {
-            GameManager.SharedInstance.MakeInvicibleFor(15.0f);
+            GameManager.SharedInstance.MakeInvicibleFor(6.0f);
+            UIManager.SharedInstance.ScorePoints(200);
             Destroy(this.gameObject);
         }
     }

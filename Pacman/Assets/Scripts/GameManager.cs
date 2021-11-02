@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager SharedInstance;
     public bool GameStarted = false;
     public bool GamePaused = false;
-    public AudioClip PauseAudio;
+    public AudioClip PauseAudio, StartAudio;
     public float InvicibleTime = 0.0f;
+    public GameObject Pacman;
     private void Awake()
     {
         if (SharedInstance == null)
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             GamePaused = !GamePaused;
-            if(GamePaused)
+            if (GamePaused)
             {
                 PlayPause();
             }
@@ -33,7 +35,7 @@ public class GameManager : MonoBehaviour
                 PauseMusic();
             }
         }
-        if(InvicibleTime>0)
+        if (InvicibleTime > 0)
         {
             InvicibleTime -= Time.deltaTime;
         }
@@ -62,5 +64,10 @@ public class GameManager : MonoBehaviour
     public void MakeInvicibleFor(float NumerOfSeconds)
     {
         InvicibleTime += NumerOfSeconds;
+    }
+    //reiniciar jeugo
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("PacmanGame");
     }
 }
